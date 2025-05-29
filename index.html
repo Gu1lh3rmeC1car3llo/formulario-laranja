@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Moderno</title>
+    <style>
+        :root {
+            --orange-light: #FFB347;
+            --orange-medium: #FF8C00;
+            --dark-bg: #1A1A1A;
+            --input-bg: #2A2A2A;
+            --text-light: #F5F5F5;
+        }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: linear-gradient(135deg, var(--orange-light), var(--orange-medium));
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .form-container {
+            background-color: rgba(30, 30, 30, 0.85);
+            backdrop-filter: blur(8px);
+            border-radius: 14px;
+            padding: 30px;
+            width: 100%;
+            max-width: 380px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        
+        h1 {
+            text-align: center;
+            margin: 0 0 25px 0;
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--orange-light);
+        }
+        
+        .form-group {
+            margin-bottom: 18px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+        
+        input {
+            width: 100%;
+            padding: 12px 14px;
+            background-color: var(--input-bg);
+            border: 1px solid #3D3D3D;
+            border-radius: 8px;
+            font-size: 15px;
+            color: white;
+            box-sizing: border-box;
+        }
+        
+        input:focus {
+            outline: none;
+            border-color: var(--orange-light);
+            box-shadow: 0 0 0 2px rgba(255, 179, 71, 0.25);
+        }
+        
+        .submit-btn {
+            background: linear-gradient(to right, var(--orange-light), var(--orange-medium));
+            color: var(--dark-bg);
+            border: none;
+            padding: 14px;
+            width: 100%;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: all 0.2s ease;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(255, 140, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Cadastrar</h1>
+        
+        <form>
+            <div class="form-group">
+                <label for="name">Nome</label>
+                <input type="text" id="name" placeholder="Seu nome completo">
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="seu@email.com">
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" placeholder="Crie uma senha">
+            </div>
+            
+            <button type="submit" class="submit-btn">Cadastrar Agora</button>
+        </form>
+    </div>
+</body>
+</html>
